@@ -1,4 +1,5 @@
 name: Release npm package
+
 on:
   push:
     branches:
@@ -6,15 +7,16 @@ on:
 
 jobs:
   release:
-    name: release
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
         with:
-          cache: npm
-          node-version: 'lts/*'
+          node-version: "12.x"
       - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
