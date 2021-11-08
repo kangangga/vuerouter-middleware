@@ -1,6 +1,7 @@
 /**
- * @since 0.6.0
+ * @since 1.0.1
+ * @returns
  */
-export function vuerouterMiddleware() {
-  // TODO: implement
+export function vuerouterMiddleware(): boolean {
+  return true
 }
