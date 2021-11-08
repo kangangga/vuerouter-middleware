@@ -17,13 +17,14 @@
 
 ``` shell
 npm install @kangangga/vuerouter-middleware
+#OR
+yarn add @kangangga/vuerouter-middleware
 ```
 
 ## Use
 
 ``` typescript
 import { vuerouterMiddleware } from '@kangangga/vuerouter-middleware'
-// TODO: describe usage
 ```
 
 ## Related
