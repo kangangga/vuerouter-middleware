@@ -79,8 +79,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "bin": {
-    "vuerouter-middleware": "./dist/src/index.js"
   }
 }
