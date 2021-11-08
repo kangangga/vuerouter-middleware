@@ -1,6 +1,5 @@
 # vuerouter-middleware
 [![License][]](https://opensource.org/licenses/ISC)
-[![Build Status]](https://github.com/kangangga/vuerouter-middleware/actions/workflows/ci.yml)
 [![NPM Package]](https://npmjs.org/package/@kangangga/vuerouter-middleware)
 [![Code Coverage]](https://codecov.io/gh/kangangga/vuerouter-middleware)
 [![semantic-release]](https://github.com/semantic-release/semantic-release)
