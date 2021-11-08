@@ -1,19 +1,10 @@
 {
-  "extends": "../tsconfig.settings.json",
-  "include": [
-    "src/**/*",
-    "test/**/test-*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "include": ["src/**/*", "test/**/test-*"],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "outDir": "./dist",
     "paths": {
-      "*": [
-        "./src/@types/*"
-      ]
+      "*": ["./src/@types/*"]
     }
   }
 }
