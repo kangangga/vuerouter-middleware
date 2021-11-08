@@ -1,24 +1,19 @@
-name: Release
+name: Release npm package
 on:
   push:
     branches: [ master, alpha, beta ]
 jobs:
   release:
-    name: Release
+    name: release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          fetch-depth: 0
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
+          cache: npm
           node-version: 'lts/*'
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Release
+      - run: npm ci
+      - run: npx semantic-release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
