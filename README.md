@@ -17,6 +17,7 @@
 
 ``` shell
 npm install @kangangga/vuerouter-middleware
+#OR
 yarn add @kangangga/vuerouter-middleware
 ```
 
