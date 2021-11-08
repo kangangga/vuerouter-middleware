@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/kangangga/vuerouter-middleware.git"
   },
+  "release": {
+    "branches": [
+      "master"
+    ]
+  },
   "license": "ISC",
   "author": "Angga Saputra <masangga.com@gmail.com> (https://github.com/user)",
   "main": "dist/src/index.js",
