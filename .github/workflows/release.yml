@@ -31,6 +31,10 @@ jobs:
     needs: [testing]
     steps:
       - name: Deploy Docs
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm test
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
